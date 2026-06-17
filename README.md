@@ -1,4 +1,4 @@
-# Poupe+ — Tela de Criar Conta
+# Poupe+ / Tela de Criar Conta
 
 Projeto acadêmico de Fintech. Tela de **cadastro de novo usuário** do app **Poupe+**, uma plataforma de gestão de finanças pessoais.
 
@@ -6,7 +6,7 @@ Projeto acadêmico de Fintech. Tela de **cadastro de novo usuário** do app **Po
 
 ---
 
-## 🚀 Como executar
+##  Como executar
 
 Basta abrir o arquivo `index.html` no navegador. Não precisa de servidor nem de conexão com a internet — todos os arquivos são locais.
 
@@ -33,7 +33,7 @@ poupe-mais/
 
 ---
 
-## 🎨 Identidade visual
+## Identidade visual
 
 | Elemento | Valor |
 |---|---|
@@ -46,7 +46,7 @@ poupe-mais/
 
 ---
 
-## ✅ Atendimento aos critérios de avaliação
+## Atendimento aos critérios de avaliação
 
 | # | Critério | Peso | Como foi atendido |
 |---|---|---|---|
@@ -59,7 +59,7 @@ poupe-mais/
 
 ---
 
-## 🖥️ Funcionalidades da tela
+##  Funcionalidades da tela
 
 - Campo de **Nome** com estado de foco (borda verde)
 - Campo de **Sobrenome** com placeholder
@@ -76,7 +76,7 @@ poupe-mais/
 
 ---
 
-## 📱 Responsividade
+##  Responsividade
 
 | Tela | Comportamento |
 |---|---|
@@ -86,6 +86,6 @@ poupe-mais/
 
 ---
 
-## 👤 Autor
+##  Autor
 
 Projeto desenvolvido como atividade da disciplina de Fintech.
