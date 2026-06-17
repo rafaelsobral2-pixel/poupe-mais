@@ -1,0 +1,157 @@
+/* =========================================================
+   Poupe+  ·  Folha de estilos personalizada
+   Complementa o Tailwind CSS com classes da identidade visual
+   ========================================================= */
+
+/* ---------- Reset / base ---------- */
+* {
+    -webkit-tap-highlight-color: transparent;
+}
+
+body {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* ---------- Painel de branding (lateral verde) ---------- */
+.brand-panel {
+    background: linear-gradient(160deg, #1a5d36 0%, #0f3d22 100%);
+    min-height: 280px;
+}
+
+@media (min-width: 1024px) {
+    .brand-panel {
+        min-height: 100vh;
+    }
+}
+
+/* Decoração de fundo: círculos sutis para dar profundidade */
+.brand-decor {
+    position: absolute;
+    inset: 0;
+    background-image:
+        radial-gradient(circle at 15% 20%, rgba(63, 206, 122, 0.18) 0%, transparent 35%),
+        radial-gradient(circle at 85% 80%, rgba(255, 255, 255, 0.06) 0%, transparent 40%);
+    pointer-events: none;
+}
+
+/* ---------- Cards de funcionalidades ---------- */
+.feature-card {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    background-color: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    padding: 0.875rem 1rem;
+    border-radius: 0.625rem;
+    backdrop-filter: blur(4px);
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.feature-card:hover {
+    background-color: rgba(255, 255, 255, 0.14);
+    transform: translateX(2px);
+}
+
+.feature-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.25rem;
+    height: 2.25rem;
+    border-radius: 0.5rem;
+    flex-shrink: 0;
+}
+
+/* ---------- Formulário ---------- */
+.form-label {
+    display: block;
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    color: #475569;       /* slate-600 */
+    margin-bottom: 0.375rem;
+}
+
+.form-input {
+    width: 100%;
+    padding: 0.65rem 0.875rem;
+    font-size: 0.95rem;
+    color: #0f172a;       /* slate-900 */
+    background-color: #ffffff;
+    border: 1px solid #d1d5db;   /* gray-300 */
+    border-radius: 0.5rem;
+    transition: border-color 0.15s ease, box-shadow 0.15s ease;
+    outline: none;
+}
+
+.form-input::placeholder {
+    color: #94a3b8;       /* slate-400 */
+}
+
+.form-input:focus,
+.form-input--focused {
+    border-color: #1a5d36;
+    box-shadow: 0 0 0 3px rgba(26, 93, 54, 0.12);
+}
+
+/* Estado de erro */
+.form-input--error,
+.form-input--error:focus {
+    border-color: #dc2626;        /* red-600 */
+    background-color: #fef2f2;    /* red-50 */
+    box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.10);
+}
+
+/* ---------- Checkbox personalizado ---------- */
+.custom-checkbox {
+    appearance: none;
+    -webkit-appearance: none;
+    width: 1.125rem;
+    height: 1.125rem;
+    border: 1.5px solid #cbd5e1;     /* slate-300 */
+    border-radius: 0.25rem;
+    background-color: #ffffff;
+    cursor: pointer;
+    position: relative;
+    flex-shrink: 0;
+    transition: background-color 0.15s ease, border-color 0.15s ease;
+}
+
+.custom-checkbox:checked {
+    background-color: #1a5d36;
+    border-color: #1a5d36;
+}
+
+.custom-checkbox:checked::after {
+    content: '';
+    position: absolute;
+    top: 1px;
+    left: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}
+
+.custom-checkbox:focus-visible {
+    outline: 2px solid #1a5d36;
+    outline-offset: 2px;
+}
+
+/* ---------- Ajustes finos de responsividade ---------- */
+
+/* Em telas muito pequenas, reduz o painel de branding */
+@media (max-width: 480px) {
+    .brand-panel {
+        min-height: auto;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+    }
+
+    .feature-card {
+        padding: 0.75rem 0.875rem;
+    }
+}
